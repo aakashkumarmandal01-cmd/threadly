@@ -1,0 +1,2 @@
+from django.db import models
+class Coupon(models.Model): code=models.CharField(max_length=50,unique=True); percent=models.DecimalField(max_digits=5,decimal_places=2,null=True,blank=True); fixed_amount=models.DecimalField(max_digits=12,decimal_places=2,null=True,blank=True); min_order=models.DecimalField(max_digits=12,decimal_places=2,default=0); active=models.BooleanField(default=True); expires_at=models.DateTimeField(null=True,blank=True); usage_limit=models.PositiveIntegerField(null=True,blank=True)
